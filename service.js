@@ -28,7 +28,7 @@ module.exports = new function() {
     channelSecretKey: 'J4B2MyhQiL6hXsc5mdBYaIyBuWO9qCeW',
     channelUrl: 'https://idcs-oda-cbd6018d8c9849979fac514afa42c1d5-da2.data.digitalassistant.oci.oraclecloud.com/connectors/v2/listeners/webhook/channels/4420797d-134c-4e7e-9010-1a3512da1ddc'
   };
-
+  
   this.randomIntInc = function (low, high) {
     return Math.floor(Math.random() * (high - low + 1) + low);
   };
@@ -40,7 +40,7 @@ module.exports = new function() {
   // expose this function to be stubbed
   this.sendWebhookMessageToBot= function (channelUrl, channelSecretKey, userId, messagePayload, additionalProperties, callback) {
     webhookUtil.messageToBotWithProperties(channelUrl, channelSecretKey, userId, messagePayload, additionalProperties, callback);
-  };
+  };  
 
   this.init= function (config) {
 
@@ -360,5 +360,3 @@ module.exports = new function() {
   return this;
 
 }();
-
-
